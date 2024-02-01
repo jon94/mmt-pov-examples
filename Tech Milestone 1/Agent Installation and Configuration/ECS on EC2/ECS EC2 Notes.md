@@ -7,6 +7,8 @@
 ---
 
 ### Application Container
+- Entrypoint added in task definition. This is required in order for the application container to resolve the IP of dd agent container.
+- https://docs.datadoghq.com/containers/amazon_ecs/apm/?tab=ec2metadataendpoint&code-lang=python#configure-the-trace-agent-endpoint
 
 #### Environment Variables for Application Container
 
