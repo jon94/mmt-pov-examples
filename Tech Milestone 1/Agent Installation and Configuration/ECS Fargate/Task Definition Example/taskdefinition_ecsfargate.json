@@ -68,7 +68,7 @@
                     "protocol": "tcp"
                 }
             ],
-            "essential": true,
+            "essential": false,
             "environment": [
                 {
                     "name": "ECS_FARGATE",
