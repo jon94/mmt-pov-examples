@@ -52,7 +52,8 @@
             "dockerLabels": {
                 "com.datadoghq.tags.env": "fargate-ecs",
                 "com.datadoghq.tags.service": "fargate-ecs-backend",
-                "com.datadoghq.tags.version": "1.0.1"
+                "com.datadoghq.tags.version": "1.0.1",
+                "com.docker.service.name": "fargate-ecs-backend"                
             }
         },
         {
@@ -86,6 +87,10 @@
                     "name": "DD_SITE",
                     "value": "datadoghq.com"
                 },
+                {
+                    "name": "DD_DOCKER_LABELS_AS_TAGS",
+                    "value": "{\"com.docker.service.name\":\"service_name\"}"
+                },                
                 {
                     "name": "DD_CONTAINER_EXCLUDE",
                     "value": "image:^aws-fargate-pause$"
