@@ -27,6 +27,10 @@
             ],
             "environment": [
                 {
+                    "name": "SERVICE_NAME",
+                    "value": "test-ecs-ec2"
+                },                   
+                {
                     "name": "DD_TRACE_SAMPLE_RATE",
                     "value": "1"
                 },   

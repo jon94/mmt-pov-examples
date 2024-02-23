@@ -33,6 +33,10 @@
                     "value": "true"
                 },
                 {
+                    "name": "DD_CONTAINER_ENV_AS_TAGS",
+                    "value": "{\"SERVICE_NAME\":\"service_name\"}"
+                },                
+                {
                     "name": "DD_DOGSTATSD_NON_LOCAL_TRAFFIC",
                     "value": "true"
                 }                
