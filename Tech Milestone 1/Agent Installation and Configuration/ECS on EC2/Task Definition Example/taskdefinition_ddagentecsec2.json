@@ -10,7 +10,13 @@
                     "containerPort": 8126,
                     "hostPort": 8126,
                     "protocol": "tcp"
-                }
+                },
+                {
+                    "name": "datadog-agent-8125-udp",
+                    "containerPort": 8125,
+                    "hostPort": 8125,
+                    "protocol": "udp"
+                }                
             ],
             "essential": true,
             "environment": [
@@ -25,7 +31,11 @@
                 {
                     "name": "DD_PROCESS_AGENT_ENABLED",
                     "value": "true"
-                }
+                },
+                {
+                    "name": "DD_DOGSTATSD_NON_LOCAL_TRAFFIC",
+                    "value": "true"
+                }                
             ],
             "mountPoints": [
                 {
