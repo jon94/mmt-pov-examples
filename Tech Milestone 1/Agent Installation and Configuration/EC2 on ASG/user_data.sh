@@ -20,6 +20,8 @@ sudo chown dd-agent /etc/datadog-agent/environment
 sudo chown $(whoami) /etc/datadog-agent/datadog.yaml
 sudo cat <<EOT > /etc/datadog-agent/datadog.yaml
 api_key: $DATADOG_API_KEY
+tags:
+  - "service_name:asg-test"
 process_config:
   process_collection:
     enabled: true
