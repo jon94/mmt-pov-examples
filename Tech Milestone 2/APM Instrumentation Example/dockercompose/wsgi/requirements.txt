@@ -1,0 +1,2 @@
+ddtrace==2.6.5
+gunicorn==20.1.0

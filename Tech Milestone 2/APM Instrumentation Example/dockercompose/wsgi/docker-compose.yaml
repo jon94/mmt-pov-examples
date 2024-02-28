@@ -1,0 +1,30 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      DD_TRACE_AGENT_HOSTNAME: "datadog-agent"
+      DD_TRACE_AGENT_PORT: "8126"
+      DD_SERVICE: "wsgi-test"
+      DD_ENV: "mmt-test"
+      DD_VERSION: "1.0.0"
+    depends_on:
+      - datadog-agent
+
+  datadog-agent:
+    image: "datadog/agent:latest"
+    environment:
+      DD_APM_ENABLED: "true"
+      DD_APM_NON_LOCAL_TRAFFIC: "true"
+      DD_API_KEY: <redacted>
+      DD_PROCESS_AGENT_ENABLED: "true"
+    ports:
+      - "8126:8126"
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - /proc/:/host/proc/:ro
+     - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
+     - /etc/passwd:/etc/passwd:ro      
