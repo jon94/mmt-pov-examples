@@ -1,6 +1,11 @@
 # wsgi on docker compose
 - This is for edge service that is running wsgi. This is running on docker compose that is hosted on ec2.
 
+# Note Runtime Metrics
+- Note that Dogstatsd have to be enabled in order for runtime metrics to be collected (https://docs.datadoghq.com/developers/dogstatsd/?tab=containeragent#agent)
+- This uses UDP on port 8125
+- For docker compose set up, there is a need to import os to obtain DD_AGENT_HOST that is set to be the service name of the datadog agent.
+
 # Run
 ```
 docker compose up -d --force-recreate --no-deps --build
