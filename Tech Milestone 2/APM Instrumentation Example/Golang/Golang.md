@@ -5,3 +5,11 @@
 ---
 ## Outcome
 ![Example Flame Graph in Datadog](image.png)
+---
+### Local Testing
+- To test and visualize your implementation on Golang, you can use a docker-compose set up. 
+- Replace the APIKEY with Datadog's API Key in the docker-compose.yaml
+- To start containers
+```
+docker compose up -d --force-recreate --no-deps --build
+```
