@@ -1,4 +1,4 @@
-module github.com/<me>/<my-repo>
+module github.com/>/<my-repo>
 
 go 1.21.5
 
